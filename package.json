@@ -6,7 +6,8 @@
   "scripts": {
     "build": "babel src -d dist",
     "start": "nodemon --exec babel-node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rimraf ./dist"
   },
   "author": "",
   "license": "ISC",
@@ -38,6 +39,6 @@
     "@babel/register": "^7.6.2",
     "babel-plugin-inline-import": "^3.0.0",
     "mocha": "^5.2.0",
-    "nodemon": "^1.19.2"
+    "nodemon": "^1.19.3"
   }
 }
