@@ -30,12 +30,6 @@ let randomValue: any = 10;
 randomValue = true;
 randomValue = 'Leo';
 
-let myVariable: any = 10;
-
-console.log(myVariable.name);
-myVariable();
-myVariable.toUpperCase();
-
 function add (num1: number,num2?: number):number{
     if(num2)
     return num1 + num2;
@@ -51,7 +45,7 @@ function add1 (num1: number,num2: number = 20) :number{
 }
 interface Person {
     firstName : string,
-    lastName : string
+    lastName? : string
 }
 function fullName (person:Person){
     console.log(`${person.firstName} ${person.lastName}`);
@@ -61,3 +55,29 @@ let p = {
     lastName : 'Messi'
 };
 fullName(p);
+
+
+class Employee {
+  private  employeeName : string;
+    constructor (name: string){
+        this.employeeName = name;
+    }
+    greet(){
+        console .log(`Good morning : ${this.employeeName}`);
+    }
+}
+let emp1 = new Employee ('Leo');
+emp1.greet();
+
+class Manager extends Employee {
+    constructor(managerName : string){
+        super(managerName);
+    }
+    delegateWork(){
+        console.log(`Manager delegating task`);
+    }
+}
+
+let m1 = new Manager( 'Messi');
+m1.delegateWork();
+m1.greet();
