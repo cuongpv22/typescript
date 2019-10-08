@@ -49,3 +49,15 @@ function add1 (num1: number,num2: number = 20) :number{
     else return num1;
 
 }
+interface Person {
+    firstName : string,
+    lastName : string
+}
+function fullName (person:Person){
+    console.log(`${person.firstName} ${person.lastName}`);
+}
+let p = {
+    firstName : 'Leo',
+    lastName : 'Messi'
+};
+fullName(p);
