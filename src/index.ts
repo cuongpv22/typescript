@@ -1,5 +1,5 @@
 import App from './app'
-import database from './src/database'
+import database from './database'
 
 database();
 const app = new App();
