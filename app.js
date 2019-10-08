@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import express from 'express';
 import AppRoute from './src/routes/AppRoute';
 import {constUtil} from './src/utils/ConstUtil'
@@ -64,11 +63,3 @@ AppRoute(api);
 const server = http.createServer(app);
 //app.get('/', (req, res) => res.send('Hello world'));
 server.listen(3000, () => console.log(`server is running on port 3000`));
-=======
-const express = require('express');
-const app = express();
-app.get('/', (req, res) => res.send('Hello world'));
-app.listen(3000, () => {
-    console.log('My REST API running on port 3000');
-});
->>>>>>> 5e1a9832f079e4244f11a3ae68096ad7f3d5074a
